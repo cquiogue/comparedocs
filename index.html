@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Document Comparison App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Document Comparison App</h1>
+
+      <div class="row">
+        <div class="column">
+          <label for="doc1-items">Document 1 Items</label>
+          <textarea id="doc1-items" placeholder="Document 1 items"></textarea>
+        </div>
+
+        <div class="column">
+          <label for="doc1-quantities">Document 1 Quantities</label>
+          <textarea
+            id="doc1-quantities"
+            placeholder="Document 1 quantities"></textarea>
+        </div>
+
+        <div class="column">
+          <label for="doc1-prices">Document 1 Prices</label>
+          <textarea id="doc1-prices" placeholder="Document 1 prices"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <label for="doc2-items">Document 2 Items</label>
+          <textarea id="doc2-items" placeholder="Document 2 items"></textarea>
+        </div>
+
+        <div class="column">
+          <label for="doc2-quantities">Document 2 Quantities</label>
+          <textarea
+            id="doc2-quantities"
+            placeholder="Document 2 quantities"></textarea>
+        </div>
+
+        <div class="column">
+          <label for="doc2-prices">Document 2 Prices</label>
+          <textarea id="doc2-prices" placeholder="Document 2 prices"></textarea>
+        </div>
+      </div>
+
+      <button class="compare-btn" onclick="compareDocuments()">
+        Compare Documents
+      </button>
+
+      <table id="comparison-table">
+        <thead>
+          <tr>
+            <th>Document 1 Items</th>
+            <th>Document 1 Quantities</th>
+            <th>Document 1 Prices</th>
+            <th>Document 2 Items</th>
+            <th>Document 2 Quantities</th>
+            <th>Document 2 Prices</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
