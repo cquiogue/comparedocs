@@ -2,47 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Document Comparison App</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Compare Docs</title>
+    <link rel="stylesheet" href="style1.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Document Comparison App</h1>
+      <h1>Compare Docs</h1>
 
       <div class="row">
         <div class="column">
-          <label for="doc1-items">Document 1 Items</label>
+          <label for="doc1-items">Doc 1 Items</label>
           <textarea id="doc1-items" placeholder="Document 1 items"></textarea>
         </div>
 
         <div class="column">
-          <label for="doc1-quantities">Document 1 Quantities</label>
+          <label for="doc1-quantities">Qty</label>
           <textarea
             id="doc1-quantities"
             placeholder="Document 1 quantities"></textarea>
         </div>
 
         <div class="column">
-          <label for="doc1-prices">Document 1 Prices</label>
+          <label for="doc1-prices">Prices</label>
           <textarea id="doc1-prices" placeholder="Document 1 prices"></textarea>
         </div>
       </div>
 
       <div class="row">
         <div class="column">
-          <label for="doc2-items">Document 2 Items</label>
+          <label for="doc2-items">Doc 2 Items</label>
           <textarea id="doc2-items" placeholder="Document 2 items"></textarea>
         </div>
 
         <div class="column">
-          <label for="doc2-quantities">Document 2 Quantities</label>
+          <label for="doc2-quantities">Quantities</label>
           <textarea
             id="doc2-quantities"
             placeholder="Document 2 quantities"></textarea>
         </div>
 
         <div class="column">
-          <label for="doc2-prices">Document 2 Prices</label>
+          <label for="doc2-prices">Prices</label>
           <textarea id="doc2-prices" placeholder="Document 2 prices"></textarea>
         </div>
       </div>
@@ -54,16 +54,25 @@
       <table id="comparison-table">
         <thead>
           <tr>
-            <th>Document 1 Items</th>
-            <th>Document 1 Quantities</th>
-            <th>Document 1 Prices</th>
-            <th>Document 2 Items</th>
-            <th>Document 2 Quantities</th>
-            <th>Document 2 Prices</th>
+            <th>Doc 1 Item</th>
+            <th>Doc 1 Qty</th>
+            <th>Doc 1 Price</th>
+            <th>Doc 2 Item</th>
+            <th>Doc 2 Qty</th>
+            <th>Doc 2 Price</th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
+
+      <div class="legend">
+        <span class="legend-item match"></span>
+        <span class="legend-label">Full Match</span>
+        <span class="legend-item partial-match"></span>
+        <span class="legend-label">Partial Match</span>
+        <span class="legend-item mismatch"></span>
+        <span class="legend-label">Complete Mismatch</span>
+      </div>
 
       <script src="script.js"></script>
     </div>
