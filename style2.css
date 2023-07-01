@@ -127,14 +127,22 @@ table td {
 
 .legend-item.match {
   background-color: #4fc3f7;
+  border-radius: 50%;
 }
 
 .legend-item.partial-match {
   background-color: #ffab40;
+  border-radius: 50%;
 }
 
 .legend-item.mismatch {
   background-color: #e53935;
+  border-radius: 50%;
+}
+
+.legend-item.mismatch2 {
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .legend-label {

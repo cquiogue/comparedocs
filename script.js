@@ -129,9 +129,9 @@ function combineData(items, quantities, prices) {
   const combinedData = [];
   for (let i = 0; i < items.length; i++) {
     combinedData.push({
-      item: items[i],
-      quantity: quantities[i],
-      price: prices[i],
+      item: items[i].trim(),
+      quantity: quantities[i].trim(),
+      price: prices[i].trim(),
     });
   }
   return combinedData;
