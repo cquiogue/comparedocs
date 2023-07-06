@@ -122,7 +122,10 @@ function parseQuantities(text) {
 }
 
 function parsePrices(text) {
-  return text.trim().split('\n');
+  return text
+    .trim()
+    .split('\n')
+    .map(price => price.replace(/[$,]/g, ''));
 }
 
 function combineData(items, quantities, prices) {
@@ -139,4 +142,16 @@ function combineData(items, quantities, prices) {
 
 function sortData(data) {
   return [...data].sort((a, b) => a.item.localeCompare(b.item));
+}
+
+function clearFields() {
+  document.getElementById('doc1-items').value = '';
+  document.getElementById('doc1-quantities').value = '';
+  document.getElementById('doc1-prices').value = '';
+  document.getElementById('doc2-items').value = '';
+  document.getElementById('doc2-quantities').value = '';
+  document.getElementById('doc2-prices').value = '';
+  document
+    .getElementById('comparison-table')
+    .getElementsByTagName('tbody')[0].innerHTML = '';
 }

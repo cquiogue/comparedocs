@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>Compare Docs</title>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
   </head>
   <body>
     <div class="container">
       <h1>Compare Docs</h1>
+      <p>
+        Please fill in all fields. Each new line counts as a separate item.
+        <br />
+        $ signs and commas for Prices are ignored - no need to delete them.
+      </p>
 
       <div class="row">
         <div class="column">
@@ -50,6 +55,7 @@
       <button class="compare-btn" onclick="compareDocuments()">
         Compare Documents
       </button>
+      <button class="clear-btn" onclick="clearFields()">Clear</button>
 
       <table id="comparison-table">
         <thead>
