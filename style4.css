@@ -38,9 +38,9 @@ p {
 }
 
 .column {
-  flex-basis: 33.33%;
+  flex-basis: 30%;
   padding: 0 5px;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .column label {
@@ -59,7 +59,7 @@ p {
   border: none;
   border-radius: 4px;
   resize: none;
-  height: 220px;
+  height: 60px;
   width: 100%;
   margin-bottom: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -67,7 +67,7 @@ p {
 
 .column:nth-child(2),
 .column:nth-child(3) {
-  flex-basis: 16.66%;
+  flex-basis: 10%;
 }
 
 .compare-btn {

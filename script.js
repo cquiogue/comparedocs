@@ -111,6 +111,12 @@ function compareDocuments() {
     row.appendChild(priceDoc2Cell);
     tbody.appendChild(row);
   }
+
+  // Scroll to the results section when Compare button is clicked
+  setTimeout(() => {
+    const tableHeaders = document.getElementsByTagName('thead')[0];
+    tableHeaders.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
 }
 
 function parseItems(text) {
@@ -140,6 +146,20 @@ function combineData(items, quantities, prices) {
   return combinedData;
 }
 
+// Get all textarea elements
+const textareas = document.querySelectorAll('textarea');
+
+// Function to resize textarea based on content
+function resizeTextarea(event) {
+  const textarea = event.target;
+  textarea.style.height = 'auto';
+  textarea.style.height = `${textarea.scrollHeight}px`;
+}
+
+// Attach the resizeTextarea function to the input event of each textarea
+textareas.forEach(textarea => {
+  textarea.addEventListener('input', resizeTextarea);
+});
 function sortData(data) {
   return [...data].sort((a, b) => a.item.localeCompare(b.item));
 }
@@ -154,4 +174,11 @@ function clearFields() {
   document
     .getElementById('comparison-table')
     .getElementsByTagName('tbody')[0].innerHTML = '';
+  // Reset the text box sizes
+  const textareas = document.getElementsByTagName('textarea');
+  for (let i = 0; i < textareas.length; i++) {
+    textareas[i].style.height = '60px';
+  }
+  // Scroll back to the top when Clear button is clicked
+  document.body.scrollIntoView({ behavior: 'smooth' });
 }
